@@ -41,7 +41,7 @@ game-stats-webapp/
 │   │   ├── models.py        # SQLAlchemy models: Session, Player, Game, etc.
 │   │   ├── schemas.py       # Pydantic schemas for API requests/responses
 │   │   ├── crud.py          # DB logic (CRUD operations)
-│   │   ├── api/routes.py    # API endpoints
+│   │   ├── routes.py        # API endpoints
 │   │   └── db.py            # DB session/connection utilities
 │   ├── requirements.txt     # Dependencies
 │   └── Dockerfile

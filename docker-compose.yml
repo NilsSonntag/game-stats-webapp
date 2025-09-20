@@ -1,0 +1,22 @@
+services:
+  backend:
+    build:
+      context: ./backend
+      # target: dev # TODO: image is dev only for now
+    container_name: stats-backend
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend/app:/app/app
+
+  # backend-prod: # placeholder for now
+  #   profiles: ["prod"]
+  #   build: ./backend
+
+  frontend:
+    build: ./frontend
+    container_name: stats-frontend
+    ports:
+      - "5173:5173"
+    volumes:
+      - ./frontend:/app
