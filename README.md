@@ -1,5 +1,36 @@
 # game-stats-webapp
 
+Web app to record, view, and analyze game sessions (only MTG for now).
+
+## Dev Setup (Docker Compose + Live Reload)
+
+1. **Requirements:**  
+   - Docker + Docker Compose
+
+2. **Start dev servers:**  
+   ```bash
+   docker compose up --build
+   ```
+   - backend: [localhost:8000](http://localhost:8000)
+   - frontend: [localhost:5173](http://localhost:5173)
+
+3. **Edit code locally:**  
+   - Changes in `backend/app/` or `frontend/src/` reload automatically.
+
+4. **Stop servers:**  
+   ```bash
+   docker compose down
+   ```
+
+All dependencies/tools run inside containers—no need for local Python/Node setup.
+
+## Tech Stack Overview
+
+- **Backend:** Python, FastAPI, SQLAlchemy, SQLite
+- **Frontend:** SvelteKit, Tailwind CSS, Chart.js
+- **Testing:** pytest, Playwright?
+- **Deployment:** docker, docker compose, traefik
+
 ## Repo Structure
 
 ```
@@ -24,9 +55,3 @@ game-stats-webapp/
 │   ├── package.json         # Dependencies
 │   └── Dockerfile
 ```
-
-## Tech Stack Overview
-
-- **Backend:** Python, FastAPI, SQLAlchemy, SQLite
-- **Frontend:** SvelteKit, Tailwind CSS, Chart.js
-- **Testing:** pytest, Playwright?
