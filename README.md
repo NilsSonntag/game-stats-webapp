@@ -2,7 +2,17 @@
 
 Web app to record, view, and analyze game sessions (only MTG for now).
 
-## Dev Setup (Docker Compose + Live Reload)
+## Development
+
+### Process
+
+1. Create `feature/` or `fix/` branch
+2. Implement changes and push
+3. Create new PR with `staging` as target
+4. Wait pipeline and merge onto staging
+5. If staging works fine, create PR to `main`
+
+### Setup (Docker Compose + Live Reload)
 
 1. **Requirements:**  
    - Docker + Docker Compose
@@ -24,14 +34,14 @@ Web app to record, view, and analyze game sessions (only MTG for now).
 
 All dependencies/tools run inside containers—no need for local Python/Node setup.
 
-## Tech Stack Overview
+### Tech Stack Overview
 
 - **Backend:** Python, FastAPI, SQLAlchemy, SQLite
 - **Frontend:** SvelteKit, Tailwind CSS, Chart.js
 - **Testing:** pytest, Playwright?, vitest?
 - **Deployment:** docker, docker compose, traefik
 
-## Repo Structure
+### Repo Structure
 
 ```
 game-stats-webapp/
