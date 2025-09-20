@@ -9,13 +9,13 @@ Web app to record, view, and analyze game sessions (only MTG for now).
 
 2. **Start dev servers:**  
    ```bash
-   docker compose up --build
+   docker compose up --build -d
    ```
    - backend: [localhost:8000](http://localhost:8000)
    - frontend: [localhost:5173](http://localhost:5173)
 
 3. **Edit code locally:**  
-   - Changes in `backend/app/` or `frontend/src/` reload automatically.
+   - Changes in `backend/app/` or `frontend/` reload automatically.
 
 4. **Stop servers:**  
    ```bash
@@ -28,7 +28,7 @@ All dependencies/tools run inside containers—no need for local Python/Node set
 
 - **Backend:** Python, FastAPI, SQLAlchemy, SQLite
 - **Frontend:** SvelteKit, Tailwind CSS, Chart.js
-- **Testing:** pytest, Playwright?
+- **Testing:** pytest, Playwright?, vitest?
 - **Deployment:** docker, docker compose, traefik
 
 ## Repo Structure
@@ -47,7 +47,7 @@ game-stats-webapp/
 │   └── Dockerfile
 ├── frontend/                
 │   ├── src/
-│   │   ├── App.svelte       # Root Svelte component
+│   │   ├── app.html         # Root Svelte component
 │   │   ├── components/      # Reusable UI pieces (SessionForm, StatsChart, etc.)
 │   │   ├── routes/          # Page views (Home, AddSession, Stats)
 │   │   └── assets/          # Imgs, styles, etc.
